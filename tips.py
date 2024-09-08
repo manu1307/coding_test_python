@@ -45,3 +45,5 @@ def square(x):
 
 composed_function = lambda x: square(add_three(x))
 print(composed_function(3))  # ( 3 + 3 )^2 = 36
+
+print("hello world")
