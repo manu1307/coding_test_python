@@ -26,3 +26,5 @@ def solution(N, stages):
 
     return answer
 
+# 시간 복잡도 : O(M + NlogN)
+
