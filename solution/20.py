@@ -18,4 +18,27 @@ def solution(participant, completion):
             return key
 
 
+def solution2(participant, completion):
+    # 해시 테이블 생성
+    dic = {}
+
+    # 참가자들의 이름을 해시 테이블에 추가
+    for p in participant:
+        if p in dic:
+            dic[p] += 1
+        else:
+            dic[p] = 1
+
+    # 완주한 선수들의 이름을 키로 하는 값을 1씩 감소
+    # 위의 풀이에서는 모든 값을 저장했지만
+    # 해당 풀이는 하나의 딕셔너리를 가지고 조작하기에 메모리가 덜 점유됨
+    for c in completion:
+        dic[c] -= 1
+
+    for key in dic.keys():
+        if dic[key] > 0:
+            return key
+
+
 print(solution(["leo", "kiki", "eden"], ["eden", "kiki"]))
+print(solution2(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"]))
