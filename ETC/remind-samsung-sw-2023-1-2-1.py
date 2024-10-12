@@ -82,7 +82,7 @@ for i in range(N):
         if board[i][j] == -11:
             er, ec = i, j
 
-print(ans)
+print(-ans)
 print(er + 1, ec + 1)
 
 # 풀면서 실수했던 점
